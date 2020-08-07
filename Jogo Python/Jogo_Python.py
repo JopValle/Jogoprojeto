@@ -21,6 +21,11 @@ while True:
 #primeiro andar que o jogador vai enfrentar
 resp = str(input('**Você está na sala A1 do andar 1.**(Pressione ENTER...)'))
 acao = andarone.comandos.comandos() 
+while True:
+    if acao == 'Morreu':
+        acao = andarone.comandos.comandos()
+    else:
+        break
 if acao == 'DESLIGAR':
     print('Uri:Obrigado por jogar nosso jogo!')
 if acao == 'APROVADO':
@@ -28,7 +33,13 @@ if acao == 'APROVADO':
     print('**Você agora está no segundo andar!**')
     sleep(2)
     acao = andartwo.comandos.comandos()
-
+    while True:
+        if acao == 'Morreu':
+            acao = andarone.comandos.comandos()
+        else:
+            break
+        if acao == 'DESLIGAR':
+            print('Uri:Obrigado por jogar nosso jogo!')
 
 
 

@@ -42,7 +42,12 @@ def comandos():
             ficha['nível'] = 1
             ficha['XP'] = 0
             ficha['vida'] = 5
-            resp = str(input('GAME OVER!')) #fazer o Uriu aparecer e falar que o jogador morreu e dps colocar o que rola
+            resp = str(input('Uriu:GAME OVER!'))
+            resp = str(input('Uriu:Você perdeu todas as suas vidas e vai ter que recomeçar do zero!'))
+            resp = str(input('Uriu:Te vejo na sala A1!'))
+            acao = 'Morreu'
+            break
+
         if ficha['Chaves'] == 3: #caso o jogador tenha os três fragmentos, ele libera a opção do teste de andar
             sleep(2)
             print('-'*20)

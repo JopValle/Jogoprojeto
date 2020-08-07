@@ -36,11 +36,15 @@ def comandos():
             resp = str(input('**Você passou de nível!!**(Pressione enter...)'))
             resp = str(input('**Você está no nível {}**(Pressione enter...)'.format(ficha['nível'])))
             resp = str(input('**Você recebeu mais 1(um) de vida**(Pressione enter...)'))
-        if ficha['vida'] == 0:
+        if ficha['vida'] == 0: #analisa se o jogador está vivo 
             ficha['nível'] = 1
             ficha['XP'] = 0
             ficha['vida'] = 5
-            resp = str(input('GAME OVER!')) #fazer o Uriu aparecer e falar que o jogador morreu e dps colocar o que rola
+            resp = str(input('Uriu:GAME OVER!'))
+            resp = str(input('Uriu:Você perdeu todas as suas vidas e vai ter que recomeçar do zero!'))
+            resp = str(input('Uriu:Te vejo na sala A1!'))
+            acao = 'Morreu'
+            break
         if ficha['Chaves'] == 3:
             sleep(2)
             print('-'*20)
